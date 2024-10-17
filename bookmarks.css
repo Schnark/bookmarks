@@ -1,0 +1,96 @@
+html {
+	font-family: sans-serif;
+}
+
+.no-select {
+	user-select: none;
+}
+
+#panel {
+	padding-bottom: 0.5em;
+	border-bottom: solid thick;
+}
+
+#img-drop {
+	min-height: 1em;
+	border: dashed thin;
+}
+
+.stars {
+	color: #ec0;
+}
+.tag-cloud {
+	margin: 0px;
+	padding: 0px;
+}
+.tag-cloud li {
+	display: inline-block;
+	border: solid medium;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	cursor: pointer;
+}
+time {
+	font-size: smaller;
+	float: right;
+}
+
+.list {
+	margin: 0px;
+	padding: 0px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+	grid-template-rows: minmax(15em, auto);
+}
+.entry {
+	display: inline-block;
+	border: solid thin;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	width: 16em;
+	min-height: 15em;
+	vertical-align: top;
+	word-wrap: break-word;
+}
+@supports (display: grid) {
+	.entry {
+		width: auto;
+	}
+}
+
+.entry > button,
+.entry .button-group {
+	float: right;
+}
+.entry h2 {
+	font-weight: bold;
+	font-size: 1.5em;
+	margin: 0px;
+	padding: 0px;
+}
+.entry h2 a {
+	color: inherit;
+	text-decoration: none;
+}
+.entry h2 a::after {
+	content: "↗";
+	color: #00f;
+}
+.entry img {
+	float: left;
+	margin-right: 1em;
+	margin-top: 1em;
+}
+.entry ul {
+	clear: both;
+}
+
+input:not([type="checkbox"]) {
+	width: 30%;
+}
+textarea, select[multiple] {
+	display: block;
+	width: 100%;
+}
